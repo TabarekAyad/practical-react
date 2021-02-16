@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class ImageSlider extends Component {
   state = {
+    visible: true,
     images: [
       "https://picsum.photos/seed/picsum/200/300",
       "https://picsum.photos/210/350",
@@ -19,7 +20,11 @@ class ImageSlider extends Component {
   render() {
     return (
       <div>
-        <img src={this.state.images[this.state.idx]} alt="random" />
+        <img
+          style={{ width: 100, height: 100 }}
+          src={this.state.images[this.state.idx]}
+          alt="random"
+        />
         <button onClick={this.handleNext}>Next image</button>
         <button
           onClick={() => {

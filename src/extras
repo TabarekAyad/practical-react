@@ -1,0 +1,12 @@
+//import PassingProps from "./components/PassingProps";
+//import PassingByFunc from "./components/PassingByFunc";
+
+// function addition(c, v) {
+  //    return c + v ;
+  //  }
+  // const add = (x, y) => x + y;
+  //const nuFunc = (n, m) => m + n;
+
+  {/*<PassingProps title= "Hello World" num= {5} myObj= {{ a: 2, b: 4}} myArr= {[1,2,3,4,5]}
+        myFunc1= {add} myFunc2= {(xx, yy) => xx + yy} myFunc3= {addition}/> 
+        <PassingByFunc title = "Passing text through a func" nmbr = {3} anArr = {[4,5,6,7]} anObj = {{x:10, y: 11}} inFunc = {nuFunc(2, 4)}/> */}
