@@ -1,5 +1,33 @@
-//import PassingProps from "./components/PassingProps";
-//import PassingByFunc from "./components/PassingByFunc";
+import PassingProps from "./components/PassingProps";
+import PassingByFunc from "./components/PassingByFunc";
+import Counter from "./components/Counter";
+import ImageSlider from "./components/ImageSlider";
+
+// I need to define a state here inside this functional component
+  // state = {
+  //   visible: true,
+  // };
+  //const [visible, setVisibility] = useState(true);
+
+  const buttonText = this.state.visible ? "Hide" : "Show";
+  const Slider = this.state.visible ? <ImageSlider /> : null;
+
+  let Slider = this.state.visible ? <ImageSlider /> : null;
+  if (!this.state.visible) {
+  Slider = <div>Hide everything from the user</div>;
+  }
+
+   {Slider}
+     <button
+       onClick={() => {
+            //setVisibility({ visible: false });
+         this.setState({ visible: !this.state.visible });
+         }}
+        />
+          {buttonText}
+        </button>
+        <Counter initialCount={0}></Counter>
+
 
 // function addition(c, v) {
   //    return c + v ;

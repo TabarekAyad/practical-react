@@ -1,51 +1,29 @@
 //import React, { useState } from "react";
-import logo from "./logo.svg";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
-
-import Counter from "./components/Counter";
-import ImageSlider from "./components/ImageSlider";
+import Nav from "./Nav";
+import About from "./About";
+import Shop from "./Shop";
 
 function App() {
-  // I need to define a state here inside this functional component
-  // state = {
-  //   visible: true,
-  // };
-  //const [visible, setVisibility] = useState(true);
-
-  const buttonText = this.state.visible ? "Hide" : "Show";
-  const Slider = this.state.visible ? <ImageSlider /> : null;
-
-  //let Slider = this.state.visible ? <ImageSlider /> : null;
-  // if (!this.state.visible) {
-  //   Slider = <div>Hide everything from the user</div>;
-  // }
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        {Slider}
-        <button
-          onClick={() => {
-            //setVisibility({ visible: false });
-            this.setState({ visible: !this.state.visible });
-          }}
-        >
-          {buttonText}
-        </button>
-        <Counter initialCount={0}></Counter>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/shop" component={Shop}></Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
+
+const Home = () => (
+  <div>
+    <h1>Home</h1>
+  </div>
+);
 
 export default App;
